@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>cco.atoth.intellij.plugin.chucknorris</id>
   <name>Chuck Norris Facts Plugin</name>
-  <version>1.0</version>
+  <version>1.01</version>
   <vendor email="tothandras@gmail.com">Andras Toth</vendor>
 
   <description><![CDATA[
