@@ -165,7 +165,10 @@ public class SettingsJPanel extends JPanel {
         Image img = ImageLoader.loadFromResource("/img/chuck.png");
         int x = (int) (g.getClipBounds().getWidth() - img.getWidth(null));
         int y = (int) (g.getClipBounds().getHeight() - img.getHeight(null));
-        g.drawImage(img,x, y,null);
+        //magic (img would flicker on the top of the panel at the start, for some reason)
+        if(x > 50 && y > 50) {
+            g.drawImage(img, x, y, null);
+        }
         super.paintComponent(g);
     }
 
