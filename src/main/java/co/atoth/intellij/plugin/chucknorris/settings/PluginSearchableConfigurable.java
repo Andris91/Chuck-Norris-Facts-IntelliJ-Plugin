@@ -2,6 +2,7 @@ package co.atoth.intellij.plugin.chucknorris.settings;
 
 import co.atoth.intellij.plugin.chucknorris.ui.SettingsJPanel;
 import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.application.ModalityState;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;
@@ -41,7 +42,7 @@ public class PluginSearchableConfigurable implements SearchableConfigurable {
             settingsPanel.setFactNo(settings.getFactLoadCount());
             settingsPanel.setFirstName(settings.getFactFirstName());
             settingsPanel.setLastName(settings.getFactLastName());
-        });
+        }, ModalityState.current());
         return settingsPanel;
     }
 
@@ -68,7 +69,14 @@ public class PluginSearchableConfigurable implements SearchableConfigurable {
             settingsPanel.setFactNo(settings.getFactLoadCount());
             settingsPanel.setFirstName(settings.getFactFirstName());
             settingsPanel.setLastName(settings.getFactLastName());
-        });
+        }, ModalityState.current());
     }
 
+    @Override
+    public Runnable enableSearch(String option) {
+        return () -> {};
+    }
+
+    @Override
+    public void disposeUIResources() {}
 }

@@ -76,13 +76,6 @@ public class IcndbFactService implements FactService {
             }
         }
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
         return result;
     }
 

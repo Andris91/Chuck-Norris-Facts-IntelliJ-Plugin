@@ -4,20 +4,22 @@
     <version>1.1</version>
     <vendor email="tothandras@gmail.com">Andras Toth</vendor>
 
+    <idea-version since-build="162.0" until-build="171.*"/>
+
     <description><![CDATA[
-      Read Chuck Norris facts in your IDE<br>
-      Greatly improves your productivity!]]></description>
+        Read Chuck Norris facts in your IDE<br>
+        Greatly improves your productivity!]]>
+    </description>
 
     <change-notes><![CDATA[
-    Added settings for plugin:<br>
-    <em>User can now change the name in the facts from "Chuck Norris" to any other name.</em>
-    <em>User can now change how many facts are loaded, from the REST API, when button is pressed</em>
-    Fixed bugs on different IntelliJ versions.<br>
-    ]]>
-</change-notes>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="162"/>
+        Added settings for plugin:<br>
+        <ul>
+            <li>User can now change the name in the facts from "Chuck Norris" to any other name.</li>
+            <li>User can now change how many facts are loaded, from the REST API, when button is pressed</li>
+        <ul>
+        <br>Fixed bugs on different IntelliJ versions.
+        ]]>
+    </change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationConfigurable instance="co.atoth.intellij.plugin.chucknorris.settings.PluginSearchableConfigurable"/>
@@ -29,7 +31,6 @@
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
     </actions>
 
 </idea-plugin>
