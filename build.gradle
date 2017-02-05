@@ -35,3 +35,8 @@ intellij {
     downloadSources Boolean.valueOf(downloadIdeaSources)
     sandboxDirectory project.rootDir.canonicalPath + "/.sandbox"
 }
+
+patchPluginXml {
+    sinceBuild = '162'
+    untilBuild = '171.*'
+}
