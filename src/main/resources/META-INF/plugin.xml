@@ -1,35 +1,33 @@
-<idea-plugin version="2">
-  <id>cco.atoth.intellij.plugin.chucknorris</id>
-  <name>Chuck Norris Facts Plugin</name>
-  <version>1.01</version>
-  <vendor email="tothandras@gmail.com">Andras Toth</vendor>
+<idea-plugin>
+    <id>cco.atoth.intellij.plugin.chucknorris</id>
+    <name>Chuck Norris Facts Plugin</name>
+    <version>1.01</version>
+    <vendor email="tothandras@gmail.com">Andras Toth</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       Read Chuck Norris facts in your IDE<br>
-      Greatly improves your productivity!
-    ]]></description>
+      Greatly improves your productivity!]]></description>
 
-  <!--<change-notes><![CDATA[-->
-      <!--Add change notes here.<br>-->
-      <!--<em>most HTML tags may be used</em>-->
+    <!--<change-notes><![CDATA[-->
+    <!--Add change notes here.<br>-->
+    <!--<em>most HTML tags may be used</em>-->
     <!--]]>-->
-  <!--</change-notes>-->
+    <!--</change-notes>-->
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="162"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="162"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable instance="co.atoth.intellij.plugin.chucknorris.settings.PluginSearchableConfigurable"/>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <toolWindow factoryClass="co.atoth.intellij.plugin.chucknorris.PluginToolWindowFactory" anchor="right" icon="/icons/chuck_16x16.png" secondary="true" id="Chuck Norris Facts"/>
-  </extensions>
+        <applicationService serviceImplementation="co.atoth.intellij.plugin.chucknorris.settings.PluginSettings"/>
 
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
+        <toolWindow factoryClass="co.atoth.intellij.plugin.chucknorris.PluginToolWindowFactory" anchor="right"
+                    icon="/icons/chuck_16x16.png" secondary="true" id="Chuck Norris Facts"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
 
 </idea-plugin>

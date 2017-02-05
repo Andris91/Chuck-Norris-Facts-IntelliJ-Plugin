@@ -1,5 +1,7 @@
-package co.atoth.intellij.plugin.chucknorris;
+package co.atoth.intellij.plugin.chucknorris.ui;
 
+import co.atoth.intellij.plugin.chucknorris.service.Fact;
+import co.atoth.intellij.plugin.chucknorris.service.IcndbFactService;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.ui.JBColor;
 
@@ -9,7 +11,7 @@ import java.util.List;
 
 public class FactJTextPane extends JTextPane {
 
-    private final Logger log = Logger.getInstance(FactService.class);
+    private final Logger log = Logger.getInstance(IcndbFactService.class);
 
     private List<Fact> factList = new ArrayList<>();
     private boolean isLoading;
@@ -48,9 +50,13 @@ public class FactJTextPane extends JTextPane {
         updateView();
     }
 
+    public void addFacts(List<Fact> facts) {
+        factList.addAll(facts);
+        updateView();
+    }
+
     private void updateView() {
         setText(getHtmlString(factList));
     }
-
 
 }

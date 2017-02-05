@@ -1,4 +1,4 @@
-package co.atoth.intellij.plugin.chucknorris;
+package co.atoth.intellij.plugin.chucknorris.service;
 
 public class Fact {
     private String id;
