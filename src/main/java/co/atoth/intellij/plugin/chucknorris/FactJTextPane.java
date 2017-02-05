@@ -29,11 +29,11 @@ public class FactJTextPane extends JTextPane {
 
     private String getHtmlString(List<Fact> facts) {
         StringBuilder builder = new StringBuilder();
-        if (isLoading) {
-            builder.append("Loading... <hr>");
-        }
         for (Fact fact : facts) {
-            builder.append(fact.getText() + "<hr>");
+            builder.append(fact.getText() + "<br><br>");
+        }
+        if (isLoading) {
+            builder.append("Loading... <br>");
         }
         return builder.toString();
     }

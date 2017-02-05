@@ -37,7 +37,7 @@ public class PluginToolWindowFactory implements ToolWindowFactory {
 
                 Task.Backgroundable backgroundTask = new Task.Backgroundable(null,"Fetching Chuck Norris fact...", false) {
                     public void run(@NotNull ProgressIndicator indicator) {
-                        factPanel.addFact(0, factService.getRandomFact());
+                        factPanel.addFact(factService.getRandomFact());
                     }
                     @Override
                     public void onFinished() {
@@ -77,7 +77,7 @@ public class PluginToolWindowFactory implements ToolWindowFactory {
         factPanel.setLoading(true);
         Task.Backgroundable backgroundTask = new Task.Backgroundable(null,"Fetching Chuck Norris fact...", false) {
             public void run(@NotNull ProgressIndicator indicator) {
-                factPanel.addFact(0, factService.getRandomFact());
+                factPanel.addFact(factService.getRandomFact());
             }
 
             @Override
