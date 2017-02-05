@@ -1,18 +1,20 @@
 <idea-plugin>
     <id>cco.atoth.intellij.plugin.chucknorris</id>
     <name>Chuck Norris Facts Plugin</name>
-    <version>1.01</version>
+    <version>1.1</version>
     <vendor email="tothandras@gmail.com">Andras Toth</vendor>
 
     <description><![CDATA[
       Read Chuck Norris facts in your IDE<br>
       Greatly improves your productivity!]]></description>
 
-    <!--<change-notes><![CDATA[-->
-    <!--Add change notes here.<br>-->
-    <!--<em>most HTML tags may be used</em>-->
-    <!--]]>-->
-    <!--</change-notes>-->
+    <change-notes><![CDATA[
+    Added settings for plugin:<br>
+    <em>User can now change the name in the facts from "Chuck Norris" to any other name.</em>
+    <em>User can now change how many facts are loaded, from the REST API, when button is pressed</em>
+    Fixed bugs on different IntelliJ versions.<br>
+    ]]>
+</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="162"/>
@@ -23,7 +25,7 @@
         <applicationService serviceImplementation="co.atoth.intellij.plugin.chucknorris.settings.PluginSettings"/>
 
         <toolWindow factoryClass="co.atoth.intellij.plugin.chucknorris.PluginToolWindowFactory" anchor="right"
-                    icon="/icons/chuck_16x16.png" secondary="true" id="Chuck Norris Facts"/>
+                    icon="/img/chuck_16x16.png" secondary="true" id="Chuck Norris Facts"/>
     </extensions>
 
     <actions>

@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'co.atoth.intellij.plugin.chucknorris'
-version '1.01'
+version '1.1'
 
 apply plugin: 'java'
 apply plugin: 'groovy'
@@ -34,10 +34,4 @@ intellij {
     pluginName = project.hasProperty('zipname') ? project.getProperty('zipname') : "Chuck-Norris-Facts-ItelliJ-Plugin"
     downloadSources Boolean.valueOf(downloadIdeaSources)
     sandboxDirectory project.rootDir.canonicalPath + "/.sandbox"
-}
-
-apply plugin: 'java'
-
-compileJava {
-    options.compilerArgs << '-Xlint:deprecation'
 }
