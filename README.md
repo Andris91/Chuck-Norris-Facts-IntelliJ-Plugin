@@ -1,4 +1,4 @@
-# Chuck-Norris-Facts-IntelliJ-Plugin<br>
+# Chuck-Norris-Facts-IntelliJ-Plugin  [![Build Status](https://travis-ci.org/atoth91/Chuck-Norris-Facts-IntelliJ-Plugin.svg?branch=master)](https://travis-ci.org/atoth91/Chuck-Norris-Facts-IntelliJ-Plugin) <br> 
 
 Read Chuck Norris facts in your IDE. Greatly improves your productivity!<br>
 
